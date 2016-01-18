@@ -1,0 +1,13 @@
+defaults:
+  endpoint: https://stream.twitter.com/1.1/statuses/sample.json
+
+oauth:
+  oauth_consumer_key: 62JmwHxQfR7uW46UYdrE1rgNA
+  oauth_nonce: a151093de7ee5600456976bac657f6bd
+  oauth_signature: v1Q57EcfY%2Bh%2B0OyHkmy5L92ePv4%3D
+  oauth_signature_method: HMAC-SHA1
+  oauth_timestamp: '1453078622'
+  oauth_token: 4195040109-x1LRzak9M4R72l356OcX9Spyah87uDsC1EC6J4h
+  oauth_version: '1.0.1'
+
+
