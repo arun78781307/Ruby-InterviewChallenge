@@ -36,6 +36,26 @@ end
 
 begin
   response = request_tweet
-  parsed_response = JSON.parse(response.body)
-
+  parsed_response = JSON.parse(response)
+rescue => er
+  p er.message
+  puts "Authentication might have failed, so reading dumped sample.json"
+  parsed_response = []
+  file = File.open("sample.json")
+  file.each_line do |line|
+    parsed_response << JSON.parse(line)
   end
+
+  tweets = []
+  parsed_response.each do |data|
+    next if data['delete']
+    tweets << marshall_json(data)
+  end
+
+
+  tweets.each do |tweet|
+    puts '-'*50
+    puts tweet.to_s
+  end
+end
+
